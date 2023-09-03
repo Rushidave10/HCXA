@@ -29,4 +29,5 @@ oracle.update_data(x)
 for _ in range(num_points):
     point = oracle.sample_optimally()
     oracle.update_data(point)
+
 oracle.render()
