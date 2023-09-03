@@ -74,6 +74,6 @@ oracle = NCountMaximization(box_constraints=[[-1, 1],
                             )
 ```
 
-
+![2D Example](./Figures/gitanimate2.gif)
 
 
