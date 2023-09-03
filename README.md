@@ -53,7 +53,7 @@ for _ in range(num_points):
 
 oracle.render()
 ```
-
+![2D Example](./Figures/4dfigure.png)
 ```python
 def reference_coverage(X):
     # for uniform distribution on a given shape the value range of the reference coverage is not important
