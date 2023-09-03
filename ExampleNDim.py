@@ -18,6 +18,7 @@ oracle = NCountMaximization(box_constraints=[[-1, 1],
                                              ],
                             n_bins=[5, 4],
                             render_online=True,
+                            reference_pdf=reference_coverage,
                             render_options=dict(annot=True),
                             )
 
