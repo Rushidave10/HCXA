@@ -2,6 +2,9 @@
 Histogram-based Count Maximization Algorithm.
 
 HXCA is a online exploration tool that allows for choosing new reference state while taking previously visited states into account. HCXA discretizes the continuous state space and uses histograms as N-dimensional counter tables.As the continuous state space is approximated by its discrete counter part, the accuracy of this representation depends on resolution which in turn depends on the number of bins used in histogram to depict each dimension. Higher number of bins results in better resolution and finer approximation of the continuous space.By utilizing the Merge Sort algorithm, HCXA effectively explores the state-space, prioritizing regions that are underrepresented in the current sample set. This approach ensures a more balanced and accurate representation of the reference coverage function. The sorted list is then traversed in a first-in-first-out (FIFO) fashion and a validity check is performed.
+
+# Example :1a
+Initialize HCXA according to size of state space and desired resolution.
 ```python
 import numpy as np
 import seaborn as sns
@@ -13,10 +16,10 @@ oracle = NCountMaximization(box_constraints=[[-1, 1],
                                              ],
                             n_bins=[5, 4],
                             render_online=True,
-                            render_options=dict(annot=True),
+                            render_options=dict(annot=False),
                             )
 ```
-
+provide initial data point to add to coverage data matrix and then call `sample_optimally` to query new point.
 ```python
 x = np.array([[0, 0],
               ])
@@ -29,7 +32,8 @@ for _ in range(num_points):
 oracle.render()
 ```
 ![2D Example](./Figures/gitanimate1.gif)
-
+# Example : 1b
+HCXA can be extended to higher dimensions just as easily
 ```python
 
 oracle = NCountMaximization(box_constraints=[[-1, 1],
