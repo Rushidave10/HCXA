@@ -58,6 +58,8 @@ for _ in range(num_points):
 oracle.render()
 ```
 ![2D Example](./Figures/4dfigure.png)
+# Features
+In many real-world scenarios, a specific shape of reference coverage is desired. This can also be implemented using HCXA by providing the user-defined function during intialization of HCXA. 
 ```python
 def reference_coverage(X):
     # for uniform distribution on a given shape the value range of the reference coverage is not important
@@ -74,10 +76,11 @@ oracle = NCountMaximization(box_constraints=[[-1, 1],
                             n_bins=[5, 4],
                             render_online=True,
                             reference_pdf=reference_coverage,
-                            render_options=dict(annot=True),
+                            render_options=dict(annot=False),
                             )
 ```
 
 ![2D Example](./Figures/gitanimate2.gif)
 
+Any suggestions and questions related to applications of HCXA  are welcomed.
 
